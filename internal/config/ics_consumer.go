@@ -12,9 +12,14 @@ const (
 )
 
 func initICSConsumerConfigureParams() {
+	_ = viper.BindEnv("ics_consumer.ics_file_extension")
+	_ = viper.BindEnv("ics_consumer.ics_files_folder")
 	_ = viper.BindEnv("ics_consumer.rabbitmq.address")
+	_ = viper.BindEnv("ics_consumer.rabbitmq.port")
+	_ = viper.BindEnv("ics_consumer.rabbitmq.credentials.username")
 	_ = viper.BindEnv("ics_consumer.rabbitmq.credentials.password")
 	_ = viper.BindEnv("ics_consumer.registrator_api.address")
+	_ = viper.BindEnv("ics_consumer.registrator_api.port")
 }
 
 // GetRabbitMQURL ...

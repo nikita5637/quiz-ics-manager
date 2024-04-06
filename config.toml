@@ -1,6 +1,6 @@
 [apiserver]
   [apiserver.bind]
-  address = "localhost"
+  address = "0.0.0.0"
   port = 8082
 
 [database]
@@ -25,7 +25,7 @@ ics_files_folder = "/var/www/quiz/ics/"
     name = "ics"
   [ics_consumer.registrator_api]
   address = "registrator-api"
-  port = 8080
+  port = 8082
 
 [log]
 level = "info"

@@ -8,6 +8,7 @@ import (
 
 func initAPIServerConfigureParams() {
 	_ = viper.BindEnv("apiserver.bind.address")
+	_ = viper.BindEnv("apiserver.bind.port")
 }
 
 // GetBindAddress ...

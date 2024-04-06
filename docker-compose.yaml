@@ -3,6 +3,8 @@ version: "3.9"
 services:
   ics-manager-api:
     build:
+      args:
+        BASE_IMAGE: ${BASE_IMAGE}
       context: .
       dockerfile: Dockerfile
     command: "/bin/ics-manager-api --config /etc/config.toml"
@@ -12,8 +14,6 @@ services:
         required: true
     networks:
       - network
-    ports:
-      - "8082:8082"
     volumes:
       - icsdata:/var/www/quiz/ics/
 

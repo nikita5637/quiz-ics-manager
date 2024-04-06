@@ -16,6 +16,10 @@ const (
 
 func initDatabaseConfigureParams() {
 	_ = viper.BindEnv("database.address")
+	_ = viper.BindEnv("database.dbname")
+	_ = viper.BindEnv("database.driver")
+	_ = viper.BindEnv("database.port")
+	_ = viper.BindEnv("database.credentials.username")
 	_ = viper.BindEnv("database.credentials.password")
 }
 

@@ -12,7 +12,12 @@ var (
 )
 
 func initLoggerConfigureParams() {
+	_ = viper.BindEnv("log.level")
+	_ = viper.BindEnv("log.module_name")
 	_ = viper.BindEnv("log.elastic.address")
+	_ = viper.BindEnv("log.elastic.enabled")
+	_ = viper.BindEnv("log.elastic.index")
+	_ = viper.BindEnv("log.elastic.port")
 }
 
 // GetElasticAddress ...

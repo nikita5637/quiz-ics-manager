@@ -1,5 +1,6 @@
 # Builder
-FROM golang:1.18.10-alpine3.17 AS builder
+ARG BASE_IMAGE=golang:1.18.10-alpine3.17
+FROM ${BASE_IMAGE} AS builder
 
 COPY ./ /go/src/quiz-ics-manager-api
 

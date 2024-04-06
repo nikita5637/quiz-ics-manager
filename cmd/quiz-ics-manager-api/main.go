@@ -3,6 +3,7 @@ package main
 import (
 	"os"
 	"runtime/debug"
+	_ "time/tzdata"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/nikita5637/quiz-ics-manager-api/internal/app/apiserver"
