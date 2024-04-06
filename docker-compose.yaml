@@ -5,12 +5,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      args:
-        GITHUB_PATH: https://github.com/nikita5637/quiz-ics-manager-api.git
-        BRANCH: v1.0
     command: "/bin/ics-manager-api --config /etc/config.toml"
     container_name: ics-manager-api
-    environment:
+    env_file:
+      - path: .env
+        required: true
     networks:
       - network
     ports:
